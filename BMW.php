@@ -11,14 +11,10 @@ require_once "Auto.php";
 
 class BMW extends Auto
 {
-    public $Transmission;
-
-    public function __construct($Transmission)
-    {
-    $this->Transmission = $Transmission;
-    }
 
 }
 
-$bmw = new BMW('TransmissionAuto');
-$bmw->engineOn(15,100);
+$bmw = new BMW();
+$speed = 20;
+$bmw->move(200, $speed);
+$bmw->trans('TransmissionAuto', 'назад', $speed);
