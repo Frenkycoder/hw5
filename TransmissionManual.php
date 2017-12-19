@@ -28,7 +28,7 @@ trait TransmissionManual
         echo "Виключили передачу";
     }
 
-    protected function chooseTransManual($way, $speed)
+    public function chooseTransManual($way, $speed)
     {
         if ($way == 'вперед') {
             if ($speed < 20) {

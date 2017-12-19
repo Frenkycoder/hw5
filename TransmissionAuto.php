@@ -17,9 +17,13 @@ trait TransmissionAuto
     {
         echo "Автоматическая коробока передач -  Режим езды назад<br>";
     }
+    private function offTrans()
+    {
+        echo "Виключили передачу";
+    }
 
 
-    protected function chooseTransAuto($way)
+    public function chooseTransAuto($way)
     {
         if($way == 'вперед') {
             $this->forward();

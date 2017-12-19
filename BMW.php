@@ -7,14 +7,14 @@
  */
 
 require_once "Auto.php";
-
+require_once "TransmissionAuto.php";
 
 class BMW extends Auto
 {
-
+    use TransmissionAuto;
 }
 
 $bmw = new BMW();
 $speed = 20;
 $bmw->move(200, $speed);
-$bmw->trans('TransmissionAuto', 'назад', $speed);
+$bmw->chooseTransAuto('вперед');
